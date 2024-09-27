@@ -30,3 +30,19 @@ Firstly, we compare the second element with the first element. So we do one proc
 1+2+3+.......+(n-1)+n=(n*(n+1))/2 => n^2/2 As a result Big-O is O(n^2).
   
 If we try to find 18 in the array, we can find it in the average case due to the position in the array. 
+
+## Selection Sort 
+In short, we find the smallest element in the array each time and replace it with the first element.
+
+### For Example:
+[7,3,5,8,2,9,4,15,6]
+1. [2,3,5,8,7,9,4,15,6] The smallest element is 2 and replace it with the first element.
+2. [2,3,5,8,7,9,4,15,6] The smallest element is 3 it is already in the right position. NOTE:(When we replace the smallest element with the first element, the second element becomes the first element in the array.)
+3. [2,3,4,8,7,9,5,15,6] The smallest element is 4 and replace it with 5.
+4. [2,3,4,8,7,9,5,15,6] The smallest element is 5 and replace it with 8.
+.
+.
+.
+.
+.
+
