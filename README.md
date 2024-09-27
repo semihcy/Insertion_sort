@@ -40,9 +40,28 @@ In short, we find the smallest element in the array each time and replace it wit
 2. [2,3,5,8,7,9,4,15,6] The smallest element is 3 it is already in the right position. NOTE:(When we replace the smallest element with the first element, the second element becomes the first element in the array.)
 3. [2,3,4,8,7,9,5,15,6] The smallest element is 4 and replace it with 5.
 4. [2,3,4,8,7,9,5,15,6] The smallest element is 5 and replace it with 8.
+
+
 .
 .
 .
 .
 .
 
+
+## Merge Sort
+Merge Sort is one of the most popular sorting algorithms that is based on the principle of Divide and Conquer Algorithm.
+Divide and Conqure --> Using the Divide and Conquer technique, we divide a problem into subproblems. When the solution to each subproblem is ready, we 'combine' the results from the subproblems to solve the main problem.
+
+### For Example:
+[16,21,11,8,12,22]
+1. [16,21,11] [8,12,22] Divide the array by 2 until there is only one element left on all side.
+2. [16] [21,11]  [8] [12,22]
+3. [16] [21] [11]  [8] [12] [22]
+4. [16] [11] [21]  [8] [12] [22]
+5. [16] [11,21]  [8] [12,22]
+6. [16,11,21] [8,12,22]
+7. [8,11,12,16,21,22]
+
+### Time Complexity:
+Because of we divide the array with n elements by 2 each time, time complexity is 2^x=n => x=log(n) and since we apply this process to each element, Big-O is O(nlog(n)).
