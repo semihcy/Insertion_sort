@@ -64,91 +64,154 @@ Divide and Conqure --> Using the Divide and Conquer technique, we divide a probl
 7. [8,11,12,16,21,22]
 
 ### Time Complexity:
-Because of we divide the array with n elements b y 2 each time, time complexity is 2^x=n => x=log(n) and since we apply this process to each element, Big-O is O(nlog(n)).
+Because of we divide the array with n elements by 2 each time, time complexity is 2^x=n => x=log(n) and since we apply this process to each element, Big-O is O(nlog(n)).
 
 
-## Binary Trees
+\## Binary Trees
+
 Each node in a Binary Search Tree has at most two children, a left child and a right child, with the left child containing values less than the parent node and the right child containing values greater than the parent node.
 
-### For Example
-[7, 5, 1, 8, 3, 6, 0, 9, 4, 2]
-1. [7] is the root node.
-2. [5] is less than [7] so move it to the left side of the root.  
-   [7]  
-  /  
-[5]  
+\### For Example
 
-3. [1] is less than [7] and also less than [5] so move it to the left side.  
-       [7]  
-      /  
-    [5]  
-   /  
-[1]  
+\[7, 5, 1, 8, 3, 6, 0, 9, 4, 2\]
 
-4. [8] is greater than [7] so move it to the right side of the root.  
-       [7]  
-      /   \  
-    [5]    [8]  
-   /  
-[1]  
+1\. \[7\] is the root node.
 
-5. [3] is less than [7] and [5] so move it to the left side of these nodes but it is greater than [1] so move it to the right side of [1].  
-       [7]  
-      /   \  
-    [5]    [8]  
-   /  
-[1]  
-   \  
-    [3]  
+2\. \[5\] is less than \[7\] so move it to the left side of the root.
 
-6. [6] is less than [7] but greater than [5] so move it to the right side of [5].   
-       [7]  
-      /   \
-    [5]    [8]  
-   /   \  
-[1]     [6]  
-   \  
-    [3]  
+\[7\]
 
-7. [0] is less than [7], [5] and [1] so move it to the left side of [1].  
-           [7]  
-          /   \  
-        [5]    [8]  
-       /   \  
-    [1]     [6]  
-   /   \  
-[0]     [3]  
+/
 
-8. [9] is greater than [7] and [8] so move it to the right side of [8].  
-           [7]  
-          /   \  
-        [5]    [8]  
-       /   \      \  
-    [1]     [6]    [9]  
-   /   \  
-[0]     [3]  
+\[5\]
 
-9. [4] is less than [7] and [5] but greater than [1] and [3] so move it to the right side of [3].  
-           [7]  
-          /   \  
-        [5]    [8]  
-       /   \      \  
-    [1]     [6]    [9]  
-   /   \  
-[0]     [3]  
-           \  
-            [4]  
+3\. \[1\] is less than \[7\] and also less than \[5\] so move it to the left side.
 
-10. [2] is less than [7] and [5] but greater than [1] and it is less than [3] so move it to the left side of [3].  
-           [7]  
-          /   \  
-        [5]    [8]  
-       /   \      \  
-    [1]     [6]    [9]  
-   /   \  
-[0]     [3]  
-       /   \  
-    [2]      [4]  
+\[7\]
+
+/
+
+\[5\]
+
+/
+
+\[1\]
+
+4\. \[8\] is greater than \[7\] so move it to the right side of the root.
+
+\[7\]
+
+/ \\
+
+\[5\] \[8\]
+
+/
+
+\[1\]
+
+5\. \[3\] is less than \[7\] and \[5\] so move it to the left side of these nodes but it is greater than \[1\] so move it to the right side of \[1\].
+
+\[7\]
+
+/ \\
+
+\[5\] \[8\]
+
+/
+
+\[1\]
+
+\\
+
+\[3\]
+
+6\. \[6\] is less than \[7\] but greater than \[5\] so move it to the right side of \[5\].
+
+\[7\]
+
+/ \\
+
+\[5\] \[8\]
+
+/ \\
+
+\[1\] \[6\]
+
+\\
+
+\[3\]
+
+7\. \[0\] is less than \[7\], \[5\] and \[1\] so move it to the left side of \[1\].
+
+\[7\]
+
+/ \\
+
+\[5\] \[8\]
+
+/ \\
+
+\[1\] \[6\]
+
+/ \\
+
+\[0\] \[3\]
+
+8\. \[9\] is greater than \[7\] and \[8\] so move it to the right side of \[8\].
+
+\[7\]
+
+/ \\
+
+\[5\] \[8\]
+
+/ \\ \\
+
+\[1\] \[6\] \[9\]
+
+/ \\
+
+\[0\] \[3\]
+
+9\. \[4\] is less than \[7\] and \[5\] but greater than \[1\] and \[3\] so move it to the right side of \[3\].
+
+\[7\]
+
+/ \\
+
+\[5\] \[8\]
+
+/ \\ \\
+
+\[1\] \[6\] \[9\]
+
+/ \\
+
+\[0\] \[3\]
+
+\\
+
+\[4\]
+
+10\. \[2\] is less than \[7\] and \[5\] but greater than \[1\] and it is less than \[3\] so move it to the left side of \[3\].
+
+\[7\]
+
+/ \\
+
+\[5\] \[8\]
+
+/ \\ \\
+
+\[1\] \[6\] \[9\]
+
+/ \\
+
+\[0\] \[3\]
+
+/ \\
+
+\[2\] \[4\]
 
 
 
